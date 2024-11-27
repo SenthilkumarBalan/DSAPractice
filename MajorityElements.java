@@ -19,7 +19,7 @@ public static int majorityElements(int[] nums) {
 			output.put(num, output.getOrDefault(num, 0)+1);
 		}
 		int arrayMax = nums.length/2;
-		for(int key: output.values()) {
+		for(int key: output.keySet()) {
 			if(output.get(key)>arrayMax) {
 				return key;
 			}
